@@ -1,6 +1,10 @@
 .box {
-  margin: 10px; }
+  margin: 2000px; }
 
 .box1 {
-  font-size: 20px;
-  color: #f20; }
+  font-size: 120px;
+  color: #f20;
+  padding: 20px; }
+
+.wrapper {
+  width: 1920px; }
