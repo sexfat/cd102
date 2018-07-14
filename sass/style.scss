@@ -1,5 +1,17 @@
+$margintop: 200px;
+$bgcolor: rgb(107, 240, 18);
+$fontfamily :'Gill Sans',
+'Gill Sans MT',
+Calibri,
+'Trebuchet MS',
+sans-serif;
+body {
+    background-color: $bgcolor;
+    font-family: $fontfamily;
+}
+
 .box {
-  margin: 2000px;
+    margin-top: $margintop;
 }
 
 .box1 {
@@ -8,6 +20,24 @@
     padding: 20px;
 }
 
-.wrapper  {
-   width: 1920px;
+.wrapper {
+    width: 20px;
+}
+
+// .container .row {
+//  width: 1366px;
+// }
+.content {
+    .row {
+        width: 1366px;
+        span {
+            color: #f20;
+            ul {
+                list-style: none;
+                .box {
+                   margin-top: $margintop;
+                }
+            }
+        }
+    }
 }
