@@ -1,10 +1,11 @@
-$margintop: 200px;
-$bgcolor: rgb(107, 240, 18);
-$fontfamily :'Gill Sans',
-'Gill Sans MT',
-Calibri,
-'Trebuchet MS',
-sans-serif;
+@import "base/var";
+@import "mixin/mixin";
+@import "layout/main";
+@import "layout/aboutus";
+
+
+
+
 body {
     background-color: $bgcolor;
     font-family: $fontfamily;
@@ -42,12 +43,7 @@ body {
     }
 }
 
-//mixin
-@mixin margin-auto() {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+
 
 .box {
     width: 300px;
@@ -63,12 +59,7 @@ body {
     @include margin-auto();
 }
 
-//傳值
-@mixin margin($left:null, $right:null, $fontsize:null) {
-    margin-left: $left;
-    margin-right: $right;
-    font-size: $fontsize;
-}
+
 
 .box_01 {
     @include margin(10px, 20px, 30px);
@@ -88,13 +79,7 @@ body {
     @include h1-font-size(30px);
 }
 
-@mixin border-radius($num) {
-    -moz-border-radius: $num;
-    -ms-border-radius: $num;
-    -o-border-radius: $num;
-    -webkit-border-radius: $num;
-    border-radius: $num;
-}
+
 
 .box-circle {
     @include border-radius(10px);

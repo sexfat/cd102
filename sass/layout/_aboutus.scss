@@ -1,0 +1,5 @@
+.aboutus {
+  width: 1000px;
+  @include margin-auto();
+  margin-top: $margintop;
+}

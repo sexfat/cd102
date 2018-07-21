@@ -1,0 +1,24 @@
+//mixin
+@mixin margin-auto() {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-top: 20px;
+}
+
+
+//傳值
+@mixin margin($left:null, $right:null, $fontsize:null) {
+    margin-left: $left;
+    margin-right: $right;
+    font-size: $fontsize;
+}
+
+
+@mixin border-radius($num) {
+    -moz-border-radius: $num;
+    -ms-border-radius: $num;
+    -o-border-radius: $num;
+    -webkit-border-radius: $num;
+    border-radius: $num;
+}
