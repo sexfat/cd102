@@ -2,10 +2,6 @@
 @import "mixin/mixin";
 @import "layout/main";
 @import "layout/aboutus";
-
-
-
-
 body {
     background-color: $bgcolor;
     font-family: $fontfamily;
@@ -43,8 +39,6 @@ body {
     }
 }
 
-
-
 .box {
     width: 300px;
     @include margin-auto();
@@ -58,8 +52,6 @@ body {
 .btn {
     @include margin-auto();
 }
-
-
 
 .box_01 {
     @include margin(10px, 20px, 30px);
@@ -78,8 +70,6 @@ body {
 .wrapper {
     @include h1-font-size(30px);
 }
-
-
 
 .box-circle {
     @include border-radius(10px);
@@ -108,15 +98,141 @@ a:hover {
 
 // &
 a {
-  color: #000;
-  &:hover {
-      color: blue;
-  }
-  &::before {
-      content: '';
-  }
-  &::after {
-    content: '';
-  }
+    color: #000;
+    &:hover {
+        color: blue;
+    }
+    &::before {
+        content: '';
+    }
+    &::after {
+        content: '';
+    }
 }
 
+.box_100 {
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+}
+
+@mixin box_100() {
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+}
+
+.box_a {
+    background-color: #f20;
+    @extend .box_100;
+}
+
+.box_b {
+    background-color: blue;
+    @extend .box_100;
+}
+
+.box_c {
+    background-color: blue;
+    @include box_100(); // @extend .box_100 ;
+}
+
+%box_200 {
+    width: 300px;
+    border: 1px solid #000;
+}
+
+.box_d {
+    @extend %box_200; //    background-color: rgb(49, 228, 225);
+}
+
+@mixin text($classname, $fontsize, $color, $image) {
+    #{$classname} {
+        font-size: $fontsize;
+        color: $color;
+        background-image: url('./images/#{$image}.jpg');
+        width: 50%;
+        height: 100%;
+    }
+}
+
+.wrapper_inner {
+    @include text('#text_box',
+    40px,
+    #f20,
+    'poter');
+}
+
+//運算
+.box_06 {
+    width: 100px + 100;
+    height: 100px - 10;
+    padding: 100px - 10px * 5;
+    font: (10px / 2);
+    color: #010203 + #040506;
+    margin: 100px * -30;
+}
+
+.box_07 {
+    width: floor(100px / 3); //無條件捨去
+    height: round(100px / 8); //四捨五入
+    padding: ceil(100px / 7); //無條件進位
+}
+
+$font-base-size: 16px;
+@mixin body-fontsize($font-base-size) {
+    body {
+        font-size: $font-base-size;
+        padding-left: ceil($font-base-size * 1.1);
+        padding-right: ceil($font-base-size * 1.1);
+    }
+    h1 {
+        font-size: ceil($font-base-size * 3.4)
+    }
+    h2 {
+        font-size: ceil($font-base-size * 3)
+    }
+    h3 {
+        font-size: ceil($font-base-size * 2.6)
+    }
+    h4 {
+        font-size: ceil($font-base-size * 2)
+    }
+    h5 {
+        font-size: ceil($font-base-size * 1)
+    }
+}
+
+@include body-fontsize($margintop);
+$num: 202;
+@for $i from 1 through $num {
+    @if $num <=200 {
+        .box-#{$i} {
+            width: $i * 1px;
+        }
+    }
+}
+
+@mixin grid($grid) {
+    @for $i from 1 through $grid {
+        .col-#{$i} {
+            width: ($i / $grid) *100%;
+            height: 30px;
+        }
+    }
+}
+
+@include grid(24);
+
+
+// $offset: 20;
+
+@mixin offsets($offset) {
+    @for $i from 1 through $offset {
+        .offset-#{$i} {
+            margin-left: ($i / $offset) * 100%;
+        }
+    }
+}
+
+@include offsets(12);

@@ -22,3 +22,23 @@
     -webkit-border-radius: $num;
     border-radius: $num;
 }
+
+
+// @mixin body($font-base-size) {
+//     body {
+//      font-size: $font-base-size;
+//      padding-left: ceil($font-base-size * 1.1);
+//      padding-right : ceil($font-base-size * 1.1);
+
+//     }
+//     h1 { font-size: ceil($font-base-size * 3.4)}
+    
+//     h2 { font-size: ceil($font-base-size * 3)}
+    
+//     h3 { font-size: ceil($font-base-size * 2.6)}
+    
+//     h4 { font-size: ceil($font-base-size * 2)}
+    
+//     h5 { font-size: ceil($font-base-size * 1)}
+    
+//     }
