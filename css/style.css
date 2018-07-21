@@ -21,3 +21,66 @@ body {
       list-style: none; }
       .content .row span ul .box {
         margin-top: 200px; }
+
+.box {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.wrapper {
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.box_01 {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 30px; }
+
+.nav h1 {
+  font-size: 20px; }
+
+.wrapper h1 {
+  font-size: 30px; }
+
+.box-circle {
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+.box-btn {
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.box-circle.btn {
+  background-color: #f20; }
+
+.box-circle .btn_01 {
+  background-color: #fff; }
+
+a {
+  color: #000; }
+
+a:hover {
+  color: blue; }
+
+a {
+  color: #000; }
+  a:hover {
+    color: blue; }
+  a::before {
+    content: ''; }
+  a::after {
+    content: ''; }

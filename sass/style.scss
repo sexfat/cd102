@@ -35,9 +35,103 @@ body {
             ul {
                 list-style: none;
                 .box {
-                   margin-top: $margintop;
+                    margin-top: $margintop;
                 }
             }
         }
     }
 }
+
+//mixin
+@mixin margin-auto() {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    @include margin-auto();
+}
+
+.wrapper {
+    width: 1920px;
+    @include margin-auto();
+}
+
+.btn {
+    @include margin-auto();
+}
+
+//傳值
+@mixin margin($left:null, $right:null, $fontsize:null) {
+    margin-left: $left;
+    margin-right: $right;
+    font-size: $fontsize;
+}
+
+.box_01 {
+    @include margin(10px, 20px, 30px);
+}
+
+@mixin h1-font-size($size) {
+    h1 {
+        font-size: $size;
+    }
+}
+
+.nav {
+    @include h1-font-size(20px);
+}
+
+.wrapper {
+    @include h1-font-size(30px);
+}
+
+@mixin border-radius($num) {
+    -moz-border-radius: $num;
+    -ms-border-radius: $num;
+    -o-border-radius: $num;
+    -webkit-border-radius: $num;
+    border-radius: $num;
+}
+
+.box-circle {
+    @include border-radius(10px);
+}
+
+.box-btn {
+    @include border-radius(5px);
+}
+
+.box-circle {
+    &.btn {
+        background-color: #f20;
+    }
+    .btn_01 {
+        background-color: #fff;
+    }
+}
+
+a {
+    color: #000
+}
+
+a:hover {
+    color: blue
+}
+
+// &
+a {
+  color: #000;
+  &:hover {
+      color: blue;
+  }
+  &::before {
+      content: '';
+  }
+  &::after {
+    content: '';
+  }
+}
+
