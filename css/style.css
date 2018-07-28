@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-top: 20px;
+  padding-top: 120px;
   margin-top: 13px; }
 
 body {
@@ -35,20 +35,20 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-top: 20px; }
+  padding-top: 120px; }
 
 .wrapper {
   width: 1920px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-top: 20px; }
+  padding-top: 120px; }
 
 .btn {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-top: 20px; }
+  padding-top: 120px; }
 
 .box_01 {
   margin-left: 10px;
@@ -288,3 +288,85 @@ h5 {
 
 .offset-12 {
   margin-left: 100%; }
+
+.box_1 {
+  width: 1px; }
+
+.box_2 {
+  width: 2px; }
+
+.box_3 {
+  width: 3px; }
+
+.box_4 {
+  width: 4px; }
+
+.box_5 {
+  width: 5px; }
+
+.box_6 {
+  width: 6px; }
+
+.box_7 {
+  width: 7px; }
+
+.box_8 {
+  width: 8px; }
+
+.box_9 {
+  width: 9px; }
+
+.box_10 {
+  width: 10px; }
+
+.a01 {
+  background-image: url("/images/a01.png");
+  width: 100px;
+  height: 35px; }
+
+.a02 {
+  background-image: url("/images/a02.png");
+  width: 100px;
+  height: 35px; }
+
+.a03 {
+  background-image: url("/images/a03.png");
+  width: 100px;
+  height: 35px; }
+
+.a04 {
+  background-image: url("/images/a04.png");
+  width: 100px;
+  height: 35px; }
+
+.etrx_01 {
+  background-image: url("/images/etrx_01.png");
+  width: 100px;
+  height: 35px; }
+
+.don01 {
+  background-image: url("/images/you.png");
+  width: 100px;
+  height: 35px; }
+
+.don02 {
+  background-image: url("/images/me.png");
+  width: 100px;
+  height: 35px; }
+
+.don03 {
+  background-image: url("/images/it.png");
+  width: 100px;
+  height: 35px; }
+
+.box-color {
+  background-color: #fff; }
+
+body .green {
+  background-color: white; }
+  body .green .wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-top: 120px; }

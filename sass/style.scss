@@ -223,10 +223,7 @@ $num: 202;
 }
 
 @include grid(24);
-
-
 // $offset: 20;
-
 @mixin offsets($offset) {
     @for $i from 1 through $offset {
         .offset-#{$i} {
@@ -236,3 +233,77 @@ $num: 202;
 }
 
 @include offsets(12);
+@for $i from 1 through 10 {
+    .box_#{$i} {
+        width: $i * 1px;
+    }
+}
+
+$list: a01,
+a02,
+a03,
+a04,
+etrx_01;
+//each
+@each $name in $list {
+    .#{$name} {
+        background-image: url('/images/#{$name}.png');
+        width: 100px;
+        height: 35px;
+    }
+}
+
+$listmap: (don01: you,
+don02: me,
+don03: it);
+@each $class,
+$filename in $listmap {
+    .#{$class} {
+        background-image: url('/images/#{$filename}.png');
+        width: 100px;
+        height: 35px;
+    }
+}
+
+$boxcolor: #010203;
+.box-color {
+    @if $boxcolor==blue {
+        background-color: blue;
+    }
+    @else if $boxcolor==yellow {
+        background-color: yellow;
+    }
+    @else {
+        background-color: #fff;
+    }
+}
+
+@mixin template($theme) {
+    body {
+        .#{$theme} {
+            @if $theme==blue {
+                background-color: blue;
+                .wrapper {
+                    width: 90%;
+                    @include margin-auto();
+                }
+            }
+            @else if $theme==yellow {
+                background-color: yellow;
+                .wrapper {
+                    width: 90%;
+                    @include margin-auto();
+                }
+            }
+            @else {
+                background-color: rgb(255, 255, 255);
+                .wrapper {
+                    width: 90%;
+                    @include margin-auto();
+                }
+            }
+        }
+    }
+}
+    
+@include template(green);
