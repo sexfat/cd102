@@ -6,6 +6,20 @@
   padding-top: 120px;
   margin-top: 13px; }
 
+@media all and (min-width: 1366px) {
+  .wrapper {
+    width: 1300px; }
+    .wrapper span {
+      font-size: 20px; } }
+
+@media all and (min-width: 1000px) {
+  .wrapper {
+    width: 800px; } }
+
+@media all and (max-width: 650px) {
+  .wrapper {
+    width: 400px; } }
+
 body {
   background-color: #1b340b;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
@@ -370,3 +384,12 @@ body .green {
     margin-right: auto;
     text-align: left;
     padding-top: 120px; }
+
+.box-b {
+  margin: 10px; }
+  .box-b ul {
+    width: 100px; }
+
+@media all and (max-width: 650px) {
+  .box {
+    height: 100px; } }

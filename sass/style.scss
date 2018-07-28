@@ -2,6 +2,12 @@
 @import "mixin/mixin";
 @import "layout/main";
 @import "layout/aboutus";
+@import "layout/desktop";
+@import "layout/medium";
+@import "layout/small";
+
+
+
 body {
     background-color: $bgcolor;
     font-family: $fontfamily;
@@ -305,5 +311,42 @@ $boxcolor: #010203;
         }
     }
 }
-    
+
 @include template(green);
+@mixin margins($var) {
+    margin: $var;
+    @content;
+}
+
+.box-b {
+    @include margins(10px) {
+        ul {
+            width: 100px;
+        }
+    }
+}
+
+
+
+
+
+@include respond(small){
+  .box {
+     height: 100px;
+
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

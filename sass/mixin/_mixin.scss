@@ -42,3 +42,26 @@
 //     h5 { font-size: ceil($font-base-size * 1)}
     
 //     }
+
+
+@mixin respond($breakpoint) {
+    //手機
+    @if $breakpoint=="small" {
+        @media all and (max-width: $small) {
+            @content;
+        }
+    }
+    //平板
+    @else if $breakpoint=="medium" {
+        @media all and (min-width: $medium) {
+            @content;
+        }
+    }
+    //桌機
+    @else if $breakpoint=="desktop" {
+        @media all and (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+
