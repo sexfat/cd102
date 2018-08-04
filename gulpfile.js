@@ -23,9 +23,6 @@ gulp.task('image', function () {
 });
 
 
-
-
-
 gulp.task('lint', function () {
   return gulp.src('js/*.js')
       .pipe(jshint())
