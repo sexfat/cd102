@@ -48,6 +48,16 @@ body {
     width: 200px;
     height: 40px;
     margin-bottom: 5px; }
+  body .btn {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
   body .box-red {
     background-color: #f20; }
   body .section {

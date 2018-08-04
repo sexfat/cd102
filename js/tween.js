@@ -98,11 +98,22 @@ function section01() {
 // section01();
 console.log("section_01 ok");
 
-TweenMax.staggerFromTo('.section02 .box', 1, {
-    scale: 1.4,
-    alpha: 0
-}, {
-    scale: 1,
-    alpha: 1,
-    ease: Elastic.easeOut
-}, 0.2);
+
+
+var _btn = $(".section02 .btn");
+
+_btn.on('click',function(){
+    TweenMax.staggerFromTo('.section02 .box', 1, {
+        scale: 1.4,
+        alpha: 0
+    }, {
+        scale: 1,
+        alpha: 1,
+        ease: Elastic.easeOut
+    }, 0.2);
+});
+
+
+
+
+
