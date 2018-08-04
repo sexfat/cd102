@@ -115,7 +115,7 @@ var tl = new TimelineMax({
     repeat: 2,
     repeatDelay: 1,
     yoyo: true,
-    onComplete: action 
+    onComplete: action
 });
 
 tl.to('.box_13', 1, {
@@ -127,7 +127,7 @@ tl.to('.box_13', 1, {
     y: 150
 });
 
-function action(){
+function action() {
     var tl_01 = new TimelineMax({
         repeat: 2,
         yoyo: true
@@ -141,4 +141,9 @@ function action(){
     });
     tl_01.add(tween01);
     tl_01.add(tween02);
-}
+};
+
+
+var scene = document.getElementById('parallax_box');
+//把滾動視差加入場景
+var parallax = new Parallax(scene);

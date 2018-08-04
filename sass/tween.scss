@@ -57,12 +57,16 @@ body {
         box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1);
       }
       .a01 {
-        left: 450px;
-        top: 230px;
+        left: 450px !important;
+        top: 230px!important;
       }
       .a02 {
-        left: 10px;
-        top: 210px;
+        left: 10px!important;
+        top: 210px!important;
+      }
+      .a03 {
+        left: 110px!important;
+        top: 410px!important;
       }
     }
   }
