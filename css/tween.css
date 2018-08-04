@@ -58,3 +58,5 @@ body {
   body .section02 {
     background-color: #007bff;
     padding: 20px; }
+    body .section02 .box {
+      margin-bottom: 10px; }

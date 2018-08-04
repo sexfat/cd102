@@ -1,6 +1,6 @@
 console.log("index ok");
 
-function section01(){
+function section01() {
     TweenMax.fromTo(['.box_01', '.box_02'], 3, {
         x: 0
         // y: 0
@@ -86,7 +86,7 @@ function section01(){
     TweenMax.set('.box_class01', {
         backgroundColor: '#333',
         fontSize: 30,
-        borderRadius: "10% 10%"
+        borderRadius: "10% 10%",
     });
 
     TweenMax.set('.box_class02', {
@@ -95,5 +95,14 @@ function section01(){
 
 }
 
-section01();
-console.log("section_01 ok")
+// section01();
+console.log("section_01 ok");
+
+TweenMax.staggerFromTo('.section02 .box', 1, {
+    scale: 1.4,
+    alpha: 0
+}, {
+    scale: 1,
+    alpha: 1,
+    ease: Elastic.easeOut
+}, 0.2);
