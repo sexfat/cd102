@@ -55,3 +55,6 @@ body {
     height: 100vh;
     color: white;
     border-bottom: 1px solid #f20; }
+  body .section02 {
+    background-color: #007bff;
+    padding: 20px; }
