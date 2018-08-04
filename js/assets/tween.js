@@ -199,13 +199,33 @@ $(function () {
 
 var scence_02 = new ScrollMagic.Scene({
     triggerElement: "#trigger_02",
-    offset: 0,
-    duration: '100%',
+    offset: 300,
+    duration: '60%',
 })
 .setClassToggle('.section06 .bg_all', 'bgc')
 .addIndicators()
 .addTo(controller) 
 
+
+
+//第三個場景
+
+var scence_03 = new ScrollMagic.Scene({
+    triggerElement: "#trigger_03",
+    offset: 200,
+    duration: '60%',
+    reverse: true
+})
+.on("enter" ,function(){
+    document.getElementById('bgvid').play(); 
+})
+.on("leave" ,function(){
+    document.getElementById('bgvid').pause();
+})
+.addIndicators({
+   name: 'video' 
+})
+.addTo(controller) 
 
 
 

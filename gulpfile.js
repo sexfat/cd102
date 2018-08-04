@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var jshint = require('gulp-jshint');
-//(1)
+var gulpImagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
@@ -16,11 +16,24 @@ gulp.task('sass', function () {
 // });
 
 
+gulp.task('image', function () {
+  gulp.src('images/*.{png,jpg,gif,ico}')
+      .pipe(gulpImagemin({
+        optimizationLevel: 5,
+        progressive: true
+      }))
+      .pipe(gulp.dest('img/'));
+});
+
+
+
+
+
 gulp.task('lint', function () {
   return gulp.src('js/*.js')
       .pipe(jshint())
       .pipe(jshint.reporter('default'))
-      .pipe(gulp.dest('js/assets/js/'));
+      .pipe(gulp.dest('js/assets/'));
 });
 
 
@@ -45,6 +58,6 @@ gulp.task('default', ['sass'], function () {
 
 
 //(4)
-// gulp.task('default' ,['sass' , 'broswer' ,'lint']);
+gulp.task('imagec' ,['image']);
 
  
