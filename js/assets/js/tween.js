@@ -183,9 +183,9 @@ $(function () {
         alpha: 1,
         rotationX: 360
     });
-
+//第一個場景
     var scence_01 = new ScrollMagic.Scene({
-            triggerElement: "#trigger",
+            triggerElement: "#trigger_01",
             offset: 0,
             duration: '100%',
             reverse: true
@@ -194,6 +194,19 @@ $(function () {
         }).setTween(tween_s)
         .addIndicators()
         .addTo(controller)
+
+//第二個場景
+
+var scence_02 = new ScrollMagic.Scene({
+    triggerElement: "#trigger_02",
+    offset: 0,
+    duration: '100%',
+})
+.setClassToggle('.section06 .bg_all', 'bgc')
+.addIndicators()
+.addTo(controller) 
+
+
 
 
 
