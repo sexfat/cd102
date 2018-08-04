@@ -111,7 +111,12 @@ _btn.on('click', function () {
     }, 0.2);
 });
 
-var tl = new TimelineMax();
+var tl = new TimelineMax({
+    repeat: 2,
+    repeatDelay: 1,
+    yoyo: true,
+    onComplete: action 
+});
 
 tl.to('.box_13', 1, {
     x: 100
@@ -121,3 +126,19 @@ tl.to('.box_13', 1, {
     x: 20,
     y: 150
 });
+
+function action(){
+    var tl_01 = new TimelineMax({
+        repeat: 2,
+        yoyo: true
+    });
+
+    var tween01 = TweenMax.to('.box_16', 1, {
+        x: 100
+    });
+    var tween02 = TweenMax.to('.box_17', 1, {
+        x: 200
+    });
+    tl_01.add(tween01);
+    tl_01.add(tween02);
+}

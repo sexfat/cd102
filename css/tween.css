@@ -60,6 +60,8 @@ body {
     cursor: pointer; }
   body .box-red {
     background-color: #f20; }
+  body .box-blue {
+    background-color: #08ccee; }
   body .section {
     width: 100%;
     height: 100vh;
