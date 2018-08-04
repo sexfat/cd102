@@ -143,7 +143,23 @@ function action() {
     tl_01.add(tween02);
 };
 
+function parallax() {
+    var scene = document.getElementById('parallax_box');
+    //把滾動視差加入場景
+    var parallax = new Parallax(scene);
+}
 
-var scene = document.getElementById('parallax_box');
-//把滾動視差加入場景
-var parallax = new Parallax(scene);
+
+
+var tl_para = new TimelineMax({
+    onComplete: parallax
+});
+
+tl_para.to('.section04 .a01', 1, {
+    x: 100,
+    ease: Bounce.easeOut
+}).to('.section04 .a02', 1, {
+    width: 630
+}).to('.section04 .a03', 1, {
+    backgroundColor: '#f20'
+});
