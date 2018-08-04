@@ -64,7 +64,8 @@ body {
     width: 100%;
     height: 100vh;
     color: white;
-    border-bottom: 1px solid #f20; }
+    border-bottom: 1px solid #f20;
+    padding: 10px; }
   body .section02 {
     background-color: #007bff;
     padding: 20px; }

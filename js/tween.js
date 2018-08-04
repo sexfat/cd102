@@ -74,8 +74,6 @@ function section01() {
         repeat: 2
     });
 
-
-
     //set
 
     TweenMax.set('.box_set', {
@@ -102,7 +100,7 @@ console.log("section_01 ok");
 
 var _btn = $(".section02 .btn");
 
-_btn.on('click',function(){
+_btn.on('click', function () {
     TweenMax.staggerFromTo('.section02 .box', 1, {
         scale: 1.4,
         alpha: 0
@@ -113,7 +111,13 @@ _btn.on('click',function(){
     }, 0.2);
 });
 
+var tl = new TimelineMax();
 
-
-
-
+tl.to('.box_13', 1, {
+    x: 100
+}).to('.box_14', 1, {
+    y: 40
+}).to('.box_15', 1, {
+    x: 20,
+    y: 150
+});
