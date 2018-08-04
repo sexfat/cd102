@@ -73,3 +73,24 @@ body {
     padding: 20px; }
     body .section02 .box {
       margin-bottom: 10px; }
+  body .section04 {
+    background-color: #7400bb;
+    padding: 30px; }
+    body .section04 .wrapper {
+      background-color: #7a1bff;
+      width: 80%;
+      height: 500px;
+      margin-left: auto;
+      margin-right: auto; }
+      body .section04 .wrapper .box-area {
+        width: 250px;
+        height: 100px;
+        background-color: #79fe8d;
+        position: relative;
+        box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.1); }
+      body .section04 .wrapper .a01 {
+        left: 450px;
+        top: 230px; }
+      body .section04 .wrapper .a02 {
+        left: 10px;
+        top: 210px; }
