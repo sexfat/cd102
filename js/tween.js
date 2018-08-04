@@ -163,3 +163,32 @@ tl_para.to('.section04 .a01', 1, {
 }).to('.section04 .a03', 1, {
     backgroundColor: '#f20'
 });
+
+// 
+$(function () {
+
+    var tls = new TimelineMax();
+    var controller = new ScrollMagic.Controller();
+
+
+    var tween_s = tls.to('.section05 .title', 1, {
+        y: 30,
+        alpha: 1
+    }).to('.section05 .slogan', 1, {
+        y: 40,
+        alpha: 1
+    });
+
+    var scence_01 = new ScrollMagic.Scene({
+            triggerElement: "#trigger",
+            offset: 180
+        }).setTween(tween_s)
+        .addIndicators()
+        .addTo(controller)
+
+
+
+    console.log("scrollmagic")
+
+
+})

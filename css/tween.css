@@ -41,6 +41,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   background-color: #5409cd;
   border: 1px solid #000; }
@@ -97,3 +100,23 @@ body {
       body .section04 .wrapper .a03 {
         left: 110px !important;
         top: 410px !important; }
+  body .section05 {
+    padding-top: 100px;
+    background-color: #fcfaaf; }
+    body .section05 .title {
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      background-color: #fa8100;
+      font-size: 30px; }
+    body .section05 .slogan {
+      margin-top: 10px;
+      padding-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+      height: 50px;
+      text-align: center;
+      background-color: #fa8100; }
