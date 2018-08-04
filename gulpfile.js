@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var jshint = require('gulp-jshint');
 //(1)
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
@@ -14,6 +15,16 @@ gulp.task('sass', function () {
 //     gulp.watch(['./sass/*.scss' ,'./sass/**/*.scss'], ['sass']);
 // });
 
+
+gulp.task('lint', function () {
+  return gulp.src('js/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(gulp.dest('js/assets/js/'));
+});
+
+
+
 // (3)瀏覽器同步
 gulp.task('default', ['sass'], function () {
 
@@ -27,13 +38,13 @@ gulp.task('default', ['sass'], function () {
   
     gulp.watch(["sass/*.scss", "sass/**/*.scss"], ['sass']).on('change', reload);
     gulp.watch("*.html").on('change', reload);
-    gulp.watch("js/*.js").on('change', reload);
+    gulp.watch("js/*.js", ['lint']).on('change', reload);
     // gulp.watch("images/*").on('change', reload);
   });
 
 
 
 //(4)
-// gulp.task('default' ,['sass' , 'watch']);
+// gulp.task('default' ,['sass' , 'broswer' ,'lint']);
 
  
