@@ -18,10 +18,7 @@ gulp.task('sass', function () {
 
 gulp.task('image', function () {
   gulp.src('images/*.{png,jpg,gif,ico}')
-      .pipe(gulpImagemin({
-        optimizationLevel: 5,
-        progressive: true
-      }))
+      .pipe(gulpImagemin())
       .pipe(gulp.dest('img/'));
 });
 
